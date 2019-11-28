@@ -1,36 +1,28 @@
 import random
 import time
 
-def dicee():
-    return random.randrange(1, 7)
 
 list_of_throws = []
 
+def average(numbers):
+    return sum(numbers) / len(numbers)
+
 dice = input("vill du slå tärning?")
+result = random.randint(1,6)
 time.sleep(1)
 while dice == "ja":
-    print(dicee())
-    list_of_throws.append(dicethrow())
-    dice2 = input("vill du slå tärning igen?")
+    result = random.randint(1,6)
+    list_of_throws.append(result)
+    print(result)
+    dice = input("vill du slå tärning igen?")
     time.sleep(1)
-    if dice2 == ("quit"):
-        quit()
-    elif dice == "mean":
-        print(float(mean_of_throws))    
+else:
+    print("ok, ha det så bra") 
 
-def sum_of_throws(list_of_throws):
-    result = 0
-    for x in list_of_throws:
-        result = result + x
-    return result
- 
-def mean_of_throws(list_of_throws):
-    result = 0 
-    for x in list_of_throws:
-        result = result + x
-    return result / len(list_of_throws)
+print(list_of_throws)
+print(average(list_of_throws))       
 
-   
+    
 
 
 
