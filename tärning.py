@@ -1,7 +1,6 @@
 import random
 import time
 
-
 list_of_throws = []
 
 def average(numbers):
@@ -23,7 +22,3 @@ print(list_of_throws)
 print(average(list_of_throws))       
 
     
-
-
-
-
